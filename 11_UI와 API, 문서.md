@@ -1,9 +1,9 @@
 ## UI와 API, 문서
 
-#### UI
+### UI
 - 사용자와 시스템의 접점
 
-#### API
+### API
 - Application Programming Interface의 약자
 - App과 프로그래밍의 접점
 - 프로그램이 동작하는 환경을 제어하기 위해서 환경에서 제공되는 조작 장치
