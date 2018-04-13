@@ -24,4 +24,7 @@
 - [모질라(Firefox)에서 운영중인 JavaScript 튜토리얼](https://developer.mozilla.org/ko/docs/JavaScript/Guide)
 - [html5rocks](http://www.html5rocks.com/ko/)
 - [JavaScript 사전](http://opentutorials.org/course/50)
-> Javascript 사전 이용시, 대괄호[값]은 생략가능의 
+> Javascript 사전 이용시, 대괄호[값]은 생략가능의
+
+## 자료출처
+- [JavaScript - 생활코딩](https://opentutorials.org/course/743)
