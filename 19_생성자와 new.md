@@ -69,8 +69,8 @@ document.write(person.introduce());
 function Person(){}
 
 var p = new Person();
-p1.name = 'egoing';
-p1.introduce = function(){
+p.name = 'egoing';
+p.introduce = function(){
   return 'My name is '+this.name; 
 }
 
