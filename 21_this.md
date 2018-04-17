@@ -16,6 +16,7 @@ func();
 ```
 - 결과
 ```
-window === this 즉, window === this가 true이므로 실행이 돼서 window === this를 출력
+window === this 출력 즉, window === this는 true
 ```
 > this는 전역객체인 window와 같다.
+
