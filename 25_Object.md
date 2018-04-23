@@ -5,6 +5,9 @@
 - 모든 객체는 Object 객체를 상속받으므로 모든 객체는 Object 객체의 프로퍼티를 가지고 있음
 
 ## 메소드 사용법의 차이 (prototype의 유무)
+- object가 가진 메소드는 두가지 형태
+  - Object.메소드() : Object 자신만 쓸 수 있음 (Object 함수 객체에 있는 메소드)
+  - Object.prototype.메소드() : 루트객체로 Object에서 객체를 통해 접근가능한 일반 메소드로 Object.prototype에 있는 메소드<br/>모든 객체가 Object를 상속하기 때문에 모든 객체가 쓸 수 있음<br/>역으로 Object의 prototype을 이용해서 메소드를 만들면 모든 객체가 쓸 수 있으나 위험 (Object 확장의 위험 참고)
 ### Object.keys() - _(prototype X)_
 - 객체가 가진 key값을 리턴
 ```
@@ -40,7 +43,7 @@ Object.prototype.toString = function(){~} 형태
 
 ## Object 확장
 - 모든 객체가 사용할 수 있는 메소드를 추가하기
-- Object는 모든 객체의 부모이기때문에 Objcet를 확장해 메소드를 만들면 그 메소드는 모든 객체들이 사용할 수 있다.
+  - Object는 모든 객체의 부모이기때문에 Objcet를 확장해 메소드를 만들면 그 메소드는 모든 객체들이 사용할 수 있다.
 
 ```
 Object.prototype.contain = function(neddle) {
@@ -71,7 +74,9 @@ for(var name in o){
 > 확장한 프로퍼티인 contain이 포함된다.
 
 - 위 문제를 해결하기위해 hasOwnProperty를 사용함
-`hasOwnProperty : 프로퍼티 해당 객체의 소속인지를 체크`
+
+`hasOwnProperty : 프로퍼티 해당 객체의 소속인지를 체크 (결과값은 boolean)`
+
 ```
 for(var name in o){
   if(o.hasOwnProperty(name)){
@@ -79,4 +84,7 @@ for(var name in o){
   }
 }
 ```
-> hasOwnProperty는 인자로 전달된 속성의 이름이 hasOwnProperty가 실행되고있는 해당 객체의 직접적인 속성인지 여부를 판단하여 만약 prototype으로 상속받은 객체라면 false가 된다. 
+> hasOwnProperty는 인자로 전달된 속성의 이름이 hasOwnProperty가 실행되고있는 해당 객체의 직접적인 속성인지 여부를 판단하여 만약 prototype으로 상속받은 객체라면 false가 된다.
+
+- 참고
+http://www.nextree.co.kr/p7323/
