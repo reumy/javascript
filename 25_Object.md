@@ -87,4 +87,5 @@ for(var name in o){
 > hasOwnProperty는 인자로 전달된 속성의 이름이 hasOwnProperty가 실행되고있는 해당 객체의 직접적인 속성인지 여부를 판단하여 만약 prototype으로 상속받은 객체라면 false가 된다.
 
 - 참고
+
 http://www.nextree.co.kr/p7323/
