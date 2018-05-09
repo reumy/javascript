@@ -1,10 +1,9 @@
-## UI와 API, 문서
+## [UI와 API, 문서](https://opentutorials.org/course/1189/6205)
 
-### UI
+### UI(User Interface)
 - 사용자와 시스템의 접점
 
-### API
-- Application Programming Interface의 약자
+### API(Application Programming Interface)
 - App과 프로그래밍의 접점
 - 프로그램이 동작하는 환경을 제어하기 위해서 환경에서 제공되는 조작 장치
 - 이 조작 장치는 프로그래밍 언어를 통해서 조작할 수 있음
@@ -17,7 +16,7 @@ ex)
 '사용자'와 '웹 개발자'의 관계의 접점이 " Interface "
 ```
 > 웹 개발자는 사용자에게 App을 제어할 수 있도록 User interface를 제공하고, 
-브라우저 개발자는 웹 개발자에게 App을 제어할 수 있도 Application programming interface를 제공함
+브라우저 개발자는 웹 개발자에게 App을 제어할 수 있도록 Application programming interface를 제공함
 
 ### 레퍼런스와 튜토리얼
 - 프로그래밍을 공부하기 위한 자료는 크게 레퍼런스(reference)와 tutorial(안내서)가 있음
