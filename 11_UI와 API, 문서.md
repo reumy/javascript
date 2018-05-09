@@ -37,3 +37,5 @@ ex)
 - [웹브라우저 API](https://developer.mozilla.org/en-US/docs/Web/API)
 - [Node.js API](https://nodejs.org/api/)
 - [Google Apps Script API](https://developers.google.com/apps-script/)
+
+API와 튜토리얼을 통해 언어의 기본소양을 얻고, 그 뒤는 커뮤니티 또는 검색엔진을 통해 필요한 정보를 찾는 것으로 문제를 해결해가며 프로그래밍을 해간다.
