@@ -57,8 +57,9 @@ _sum = 10
 
 ## funtion.length
 - 매개변수와 관련 된 두가지 수가 있음
-  - arguments.length : 함수로 전달된 실제 인자의 수를 의미 (함수의 매개변수 갯수)
-  - 함수이름.length : 함수에 정의된 인자의 수를 의미 (함수를 호출할때의 인자의 갯수)
+  - arguments.length : 함수로 전달된 실제 인자의 수를 의미 (함수를 호출할때의 인자의 갯수)
+  - 함수이름.length : 함수에 정의된 인자의 수를 의미 (함수의 매개변수 갯수)
+
 ```
 function zero(){
   console.log(
@@ -67,7 +68,8 @@ function zero(){
   );
 }
 zero();  // zero.length 0 arguments 0 
-
+```
+```
 function one(arg1){
   console.log(
     'one.length', one.length,
@@ -75,7 +77,8 @@ function one(arg1){
   );
 }
 one('val1', 'val2');  // one.length 1 arguments 2 
-
+```
+```
 function two(arg1, arg2){
   console.log(
     'two.length', two.length,
@@ -84,3 +87,4 @@ function two(arg1, arg2){
 }
 two('val1');  // two.length 2 arguments 1
 ```
+- 매개변수와 인자의 수가 같아야하는 작업을 할때 사용됨
