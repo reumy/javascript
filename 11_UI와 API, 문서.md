@@ -21,7 +21,7 @@ ex)
 ### 레퍼런스와 튜토리얼
 - 프로그래밍을 공부하기 위한 자료는 크게 레퍼런스(reference)와 tutorial(안내서)가 있음
   - 레퍼런스(reference) : 명령어의 사전 (ex. [자바스크립트 사전](https://opentutorials.org/course/50))
-  - 튜토리얼(tutorial) : 안내서, 언어의 문법설명 (ex. 생활코딩 강의)
+  - 튜토리얼(tutorial) : 안내서, 언어의 문법설명 (ex. 생활코딩 강의) → 현재 정리하는 자료들은 여기에 포함됨
   - 호스트환경 : web, node.js, javascript, Google Apps Script ...
 
 ### 자바스크립트의 API
