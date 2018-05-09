@@ -29,9 +29,9 @@ ex)
 
 #### 자바스크립트 API 문서
 - [ECMAScript (표준문서)](http://www.ecma-international.org/publications/standards/Ecma-262.htm)
-- [Javascript 사전 (생활코딩)](https://opentutorials.org/course/50)
-- [Javascript 레퍼런스 (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
-- [jscript 레퍼런스 (MSDN)](https://msdn.microsoft.com/ko-kr/library/z688wt03(v=vs.100).aspx)
+- [Javascript 사전 (생활코딩)](https://opentutorials.org/course/50) → (한글화된 API) 생활코딩에서 제공
+- [Javascript 레퍼런스 (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) → mozilla에서 제공
+- [jscript 레퍼런스 (MSDN)](https://msdn.microsoft.com/ko-kr/library/z688wt03(v=vs.100).aspx) → microsoft에서 제공
 
 #### 호스트 환경의 API 문서
 - [웹브라우저 API](https://developer.mozilla.org/en-US/docs/Web/API)
