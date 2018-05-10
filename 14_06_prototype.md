@@ -1,6 +1,7 @@
 ## prototype
 - 원래의 형태
 - 함수는 객체다. 그러므로 생성자로 사용될 함수도 객체다. 객체는 프로퍼티를 가질 수 있는데 prototype이라는 프로퍼티는 그 용도가 약속되어있는 특수한 프로퍼티다. prototype에 객체를 저장해두고 그 저장된 속성들은 생성자를 통해서 객체가 만들어질 때 그 객체에 연결된다.
+
 ```
 function func(){}
 console.log(func.prototype);  // func{} 빈객체
@@ -109,3 +110,5 @@ var o = new Sub();
 console.log(o.ultraProp);  // true
 ```
 - Super.prototype = Ultra.prototype 가 아닌 Super.prototype = new Ultra() 를 사용하는 이유<br>자식의 값을 변경하면 그것이 부모에게도 반영됨<br/>Super.prototype = new Ultra()는 Ultra.prototype의 원형으로 하는 객체가 생성되기 때문에 new Ultra()를 통해서 만들어진 객체에 변화가 생겨도 Ultra.prototype의 객체에는 영향을 주지 않음<br/>그래서 객체를 상속받을때는 prototype을 통해 만들어진 복제를 사용해야함
+
+- 생성자가 가지고있는 prototype이라는 프로퍼티 안에있는 객체가 만들어지는 그 객체의 원형이됨
