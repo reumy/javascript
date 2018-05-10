@@ -26,24 +26,86 @@ console.log(o.ultraProp);  // true
 ```
 > 객체 o에서 ultraProp를 찾음<br/>없다면 Sub.prototype.ultraProp를 찾음<br/>없다면 Super.prototype.ultraProp를 찾음<br/>없다면 Ultra.prototype.ultraProp를 찾음<br/>즉, ultraProp는 객체 o 에 ultraProp는 함수가 있는지 찾고 없다면 생성자를 찾아내 생성자에 정의되어있는 prototype를 뒤져서 ultraProp를 찾아낸다.
 
+`prototype chain : prototype는 객체와 객체를 연결하는 체인의 역할을 하는 것으로 이처럼 연결된 관계를 일컬음`
+
+
 ![이미지](images/js35.png)
 
 > Super생성자가 만든 객체(prototype)가 new Super안에 들어감 Super생성자의 prototype객체는 new ultra로 만들어진 객체
 
-`prototype chain : prototype는 객체와 객체를 연결하는 체인의 역할을 하는 것으로 이처럼 연결된 관계를 일컬음`
 
 ```
 function Ultra(){}
 Ultra.prototype.ultraProp = true;
  
 function Super(){}
-var t = new Ultra();
-t.ultraProp = 4;
-Super.prototype = t;
+Super.prototype = new Ultra();
  
 function Sub(){}
 Sub.prototype = new Super();
  
 var o = new Sub();
+o.ultraProp = 1;
+console.log(o.ultraProp);  // 1
+```
+```
+function Ultra(){}
+Ultra.prototype.ultraProp = true;
+ 
+function Super(){}
+Super.prototype = new Ultra();
+ 
+function Sub(){}
+Sub.prototype = new Super();
+Sub.prototype.ultraProp = 2 
+
+var o = new Sub();
+console.log(o.ultraProp);  // 2
+```
+```
+function Ultra(){}
+Ultra.prototype.ultraProp = true;
+ 
+function Super(){}
+var s = new puper();
+s.ultraProp = 3;
+Super.prototype = s;
+ 
+function Sub(){}
+Sub.prototype = new Super();
+
+var o = new Sub();
+console.log(o.ultraProp);  // 3
+```
+```
+function Ultra(){}
+Ultra.prototype.ultraProp = true;
+ 
+function Super(){}
+var t = new Ultra();
+t.ultraProp = 4
+Super.prototype = t;
+ 
+function Sub(){}
+Sub.prototype = new Super();
+Sub.prototype.ultraProp = 2 
+
+var o = new Sub();
 console.log(o.ultraProp);  // 4
 ```
+```
+function Ultra(){}
+Ultra.prototype.ultraProp = true;
+ 
+function Super(){}
+var t = new Ultra();
+Super.prototype = t;
+ 
+function Sub(){}
+Sub.prototype = new Super();
+Sub.prototype.ultraProp = 2 
+
+var o = new Sub();
+console.log(o.ultraProp);  // true
+```
+- sub.prototype = super.prototype 가 아닌 Sub.prototype = new Super() 를 사용하는 이유<br>자식에게 일어나는것이 부모에게도 반영될 수 있음<br/>그래서 객체를 상속받을때는 prototype을 통해 만들어진 복제를 사용해야함
