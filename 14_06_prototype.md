@@ -28,7 +28,7 @@ console.log(o.ultraProp);  // true
 
 ![이미지](images/js35.png)
 
-> Super생성자가 만든 객체(prototype)가 new Super안에 들어감 Super생성자의 prototyp e객체는 new ultra로 만들어진 객체
+> Super생성자가 만든 객체(prototype)가 new Super안에 들어감 Super생성자의 prototype객체는 new ultra로 만들어진 객체
 
 `prototype chain : prototype는 객체와 객체를 연결하는 체인의 역할을 하는 것으로 이처럼 연결된 관계를 일컬음`
 
