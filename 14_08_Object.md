@@ -6,20 +6,28 @@
 - 모든 객체는 암시적으로 Object 객체를 상속받으므로 모든 객체는 Object 객체의 프로퍼티를 가지고 있음
   - object.prototype은 모든 객체의 prototype이 됨 즉, 모든 객체가 사용가능
 
-## 메소드 사용법의 차이 (prototype의 유무)
+## [Object API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+- 사용법을 보는 방법에 집중
+
+### 메소드 사용법의 차이 (prototype의 유무)
 - object가 가진 메소드는 두가지 형태
   - Object.메소드() : Object 자신만 쓸 수 있음 (Object 함수 객체에 있는 메소드)
   - Object.prototype.메소드() : 루트객체로 Object에서 객체를 통해 접근가능한 일반 메소드로 Object.prototype에 있는 메소드<br/>모든 객체가 Object를 상속하기 때문에 모든 객체가 쓸 수 있음<br/>역으로 Object의 prototype을 이용해서 메소드를 만들면 모든 객체가 쓸 수 있으나 위험 (Object 확장의 위험 참고)
+  
+  
 ### Object.keys() - _(prototype X)_
 - 객체가 가진 key값을 리턴
 ```
 var arr = ['a','b','c'];
 console.log(Object.keys(arr));  // ["0", "1", "2"]
+
+var o = {name:"egoing", age:"20"}
+console.log(Objcet.key(o));  // ["name", "age"]
 ```
 > 인자에 사용할 배열을 넣어줌<br/>실행 : Object.메소드(인자);
 
 ### Object`.prototype`.toString() - _(prototype O)_
-- 객체가 담고있는 값을 보기좋게 출력
+- 객체가 담고있는 값, 또는 상태를 보기좋게 출력
 ```
 var o = new Object();
 console.log(o.toString());  // [object object]
@@ -30,9 +38,9 @@ console.log(a.toString());  // 1,2,3
 var b = new Array(1,2,3);
 console.log(b.toString());  // 1,2,3
 ```
-> prototype이 붙어있는 메소드들은 새로운 객체를 만들어주고 실행<br/>실행 : 객체가 담긴 식별자.메소드();
+- prototype이 붙어있는 메소드들은 새로운 객체를 생성하고 그 객체의 메소드로써 사용함<br/>객체가 담긴 식별자.메소드();
 
-- prototype이 있는 메소드가 new Object()를 한다는건 Object가 생성자 함수임을 의미
+- Objcet.prototype.메소드는 결국 new Object()를 한다는 것이고 그것은 Object가 생성자 함수임을 의미
 ```
 즉,
 
@@ -42,6 +50,7 @@ Object.keys = function(){~} 형태
 Object.prototype.toString()은
 Object.prototype.toString = function(){~} 형태
 ```
+- porototype은 모든 객체들이 상속받고있는 공통의 기능
 
 ## Object 확장
 - 모든 객체가 사용할 수 있는 메소드를 추가하기
