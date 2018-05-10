@@ -81,16 +81,21 @@ console.log(a.contain('k8805'));  // false
 
 ## Object 확장의 위험
 - Object 객체는 확장하지 않는 것이 바람직한 이유는 모든 객체에 영향을 주기 때문
+- 장점이자 단점이 됨
 ```
 for(var name in o){
   console.log(name);  // name city contain
 }
+
+for(var name in a){
+  console.log(name);  // 0 1 2 contain
+}
 ```
-> 확장한 프로퍼티인 contain이 포함된다.
+> 확장한 프로퍼티인 contain이 포함 됨<br/>즉, object에 메소드를 추가하고 for in문을 사용하게 되면 상속받은 프로퍼티도 포함되어 나열 됨<br/>정의한 프로퍼티들은 각각이 object이므로 contain도 포함 됨
 
 - 위 문제를 해결하기위해 hasOwnProperty를 사용함
 
-`hasOwnProperty : 프로퍼티 해당 객체의 소속인지를 체크 (결과값은 boolean)`
+- `hasOwnProperty : 프로퍼티 해당 객체의 소속인지를 체크 (결과값은 boolean)`<br/>부모로부터 상속받은 프로퍼티와 자기자신이 직접 정의한 프로퍼티를 구분할 수 있음
 
 ```
 for(var name in o){
@@ -99,7 +104,8 @@ for(var name in o){
   }
 }
 ```
-> hasOwnProperty는 인자로 전달된 속성의 이름이 hasOwnProperty가 실행되고있는 해당 객체의 직접적인 속성인지 여부를 판단하여 만약 prototype으로 상속받은 객체라면 false가 된다.
+> hasOwnProperty는 인자로 전달된 속성의 이름이 hasOwnProperty가 실행 되고있는 해당 객체의 직접적인 속성인지 여부를 판단하여 만약 prototype으로 상속받은 객체라면 false가 된다.
+
 
 ### 참고
 - http://www.nextree.co.kr/p7323/
