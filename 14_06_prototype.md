@@ -26,6 +26,8 @@ console.log(o.ultraProp);  // true
 ```
 > 객체 o에서 ultraProp를 찾음<br/>없다면 Sub.prototype.ultraProp를 찾음<br/>없다면 Super.prototype.ultraProp를 찾음<br/>없다면 Ultra.prototype.ultraProp를 찾음<br/>즉, ultraProp는 객체 o 에 ultraProp는 함수가 있는지 찾고 없다면 생성자를 찾아내 생성자에 정의되어있는 prototype를 뒤져서 ultraProp를 찾아낸다.
 
+![이미지](images/js35.png)
+
 > Super생성자가 만든 객체(prototype)가 new Super안에 들어감 Super생성자의 prototyp e객체는 new ultra로 만들어진 객체
 
 `prototype chain : prototype는 객체와 객체를 연결하는 체인의 역할을 하는 것으로 이처럼 연결된 관계를 일컬음`
