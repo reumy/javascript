@@ -52,6 +52,7 @@ Object.prototype.toString = function(){~} 형태
 ```
 - porototype은 모든 객체들이 상속받고있는 공통의 기능
 
+
 ## Object 확장
 - 모든 객체가 사용할 수 있는 메소드를 추가하기
   - Object는 모든 객체의 부모이기때문에 Objcet를 확장해 메소드를 만들면 그 메소드는 모든 객체들이 사용할 수 있다.
@@ -72,8 +73,11 @@ console.log(o.contain('egoing'));  // true
 var a = ['egoing','leezche','grapittie'];
 console.log(a.contain('k8805'));  // false
 ```
-> 해당 인자를 찾아서 있으면 true 없으면 false를 리턴<br/>여기에서 this는 객체안에 this이므로 그 메소드가 소속된 객체를 의미 즉, 메소드가 소속 된 객체인 o 와 a를 가르킴
+> 해당 인자를 찾아서 있으면 true 없으면 false를 리턴하는 contain 메소드를 만듬
 
+> 여기에서 this는 객체안에 this이므로 그 메소드가 소속된 객체를 의미 즉, 메소드가 소속 된 객체인 o 와 a를 가르킴
+
+- 만들고자하는 로직이 어떻게 사용될지를 구상한 후 만드는것이 좋다.
 
 ## Object 확장의 위험
 - Object 객체는 확장하지 않는 것이 바람직한 이유는 모든 객체에 영향을 주기 때문
