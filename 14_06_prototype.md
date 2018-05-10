@@ -108,4 +108,4 @@ Sub.prototype.ultraProp = 2
 var o = new Sub();
 console.log(o.ultraProp);  // true
 ```
-- sub.prototype = super.prototype 가 아닌 Sub.prototype = new Super() 를 사용하는 이유<br>자식에게 일어나는것이 부모에게도 반영될 수 있음<br/>그래서 객체를 상속받을때는 prototype을 통해 만들어진 복제를 사용해야함
+- Super.prototype = Ultra.prototype 가 아닌 Super.prototype = new Ultra() 를 사용하는 이유<br>자식의 값을 변경하면 그것이 부모에게도 반영됨<br/>Super.prototype = new Ultra()는 Ultra.prototype의 원형으로 하는 객체가 생성되기 때문에 new Ultra()를 통해서 만들어진 객체에 변화가 생겨도 Ultra.prototype의 객체에는 영향을 주지 않음<br/>그래서 객체를 상속받을때는 prototype을 통해 만들어진 복제를 사용해야함
