@@ -70,9 +70,9 @@ var o = {'name':'egoing', 'city':'seoul'}
 console.log(o.contain('egoing'));  // true
 
 var a = ['egoing','leezche','grapittie'];
-console.log(a.contain('leezche'));  // true
+console.log(a.contain('k8805'));  // false
 ```
-> 해당 인자를 찾아서 있으면 true 없으면 false를 리턴<br/>this : 메소드가 소속 된 객체인 o 와 a
+> 해당 인자를 찾아서 있으면 true 없으면 false를 리턴<br/>여기에서 this는 객체안에 this이므로 그 메소드가 소속된 객체를 의미 즉, 메소드가 소속 된 객체인 o 와 a를 가르킴
 
 
 ## Object 확장의 위험
